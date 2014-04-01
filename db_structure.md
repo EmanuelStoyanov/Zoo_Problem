@@ -11,3 +11,9 @@ age: int
 gender: text
 
 weight: int
+
+## Table zoo
+
+capacity: int
+
+budget: int
