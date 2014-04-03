@@ -19,10 +19,9 @@ class Zoo():
     def daily_outcomes(self, cursor):
         sum = 0
         for animal in self.animals:
-            result = "SELECT food_type FROM animals WHERE species = ?"
-            cursor.execute(result, (animal.species))
-            """ if method eat() return kilos food that animal should eat """
-            if result == 'carnivore':
+            """ if method eat() return kilos food that animal should eat 
+                and method is_carnivore which return True if its so"""
+            if is_carnivore(animal):
                 sum += animal.eat()*4
             else:
                 sum += animal.eat()*2
